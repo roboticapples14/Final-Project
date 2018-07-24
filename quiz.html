@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<script src="quiz.js"></script>
+
   <head>
-    <script src="quiz.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
+
+    <!--Question 1: Working under stress -->
     <question>
-    <h3>Are you smart?</h3>
+    <h3>Are you able to work clearly and effectively during high stress situations?</h3>
     <p>
       <label>
-        <input type='radio' name="smarts" value="20" />
-        <span class="checkable">Yes</span>
+        <input type='radio' name="stressManagement" value="20" />
+        <span class="checkable">I work best under stress</span>
       </label>
     </p>
     <p>
-      <input id="radiodemo2" checked type='radio' name="smarts" value="10" />
-      <label for="radiodemo2" class="checkable">No</span>
+      <input id="radiodemo2" checked type='radio' name="stressManagement" value="10" />
+      <label for="radiodemo2" class="checkable">I can manage but I don't work well</span>
     </p>
+    <p>
+      <input id="radiodemo2" checked type='radio' name="stressManagement" value="0" />
+      <label for="radiodemo2" class="checkable">I don't work well under pressure</span>
+    </p>
+
   </question>
+
+  <!-- Question 2: Delayed satisfaction quotient -->
+  <question>
+  <h3>When you are working on a project, do you find more satisfaction when there are immediate results,
+    or projects which yield longer lasting, and sometimes delayed results?</h3>
+  <p>
+    <label>
+      <input type='radio' name="delayedSatisfaction" value="0" />
+      <span class="checkable">I prefer work with immediate results</span>
+    </label>
+  </p>
+  <p>
+    <input id="radiodemo2" checked type='radio' name="delayedSatisfaction" value="20" />
+    <label for="radiodemo2" class="checkable">I prefer working on long term projects</span>
+  </p>
+</question>
+<button onclick="document.getElementById('Submit').innerHTML = Submit()">Submit</button>
+
   </body>
 </html>
