@@ -1,0 +1,22 @@
+#banner {
+  justify-content: center;
+  background-image: url("1.jpg");
+  background-position: center;
+  background-size: 40px x 30px;
+  padding:8em 0 6em 0;
+  text-align: center;
+  color: black;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+  background: rgba(0,0,0, 0.5);
+
+}
+#banner h1 {
+  font-size: 4em;
+  margin-bottom: .25em;
+  color: #FFF;
+}
+#banner p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.75em;
+}
