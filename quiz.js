@@ -19,12 +19,15 @@ var Computer_Science = 0;
 
 
 function submit() {
+  x = document.getElementById("sM20").value
+  if document.getElementById("sM20").checked = true;) {
+    Computer_Science = Computer_Science += x
+  document.write(Computer_Science)
 
 }
-var x = document.createElement("radiodemo2");
-x.setAttribute("type", "radio");
 
+/*var x = document.getElementById("mS20").checked;
+document.write(x)*/
 
-function submit() {
-  //add up scores
-}
+/*var x = document.createElement("radiodemo2");
+x.setAttribute("type", "radio"); */
