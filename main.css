@@ -1,15 +1,70 @@
 #banner {
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  padding: 8em 0 6em 0;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
   background-image: url("1.jpg");
   background-position: center;
-  background-size: 40px x 30px;
-  padding:8em 0 6em 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 0;
+  min-height: 100vh;
+  height: 100vh !important;
+  position: relative;
   text-align: center;
-  color: black;
+  overflow: hidden;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: white;
-  background: rgba(0,0,0, 0.5);
+  font-family: 'Tahoma', Geneva, sans-serif;
+}
 
+
+
+#banner .inner {
+  -moz-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  transform: scale(1.0);
+  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+#banner:before {
+  -moz-transition: opacity 3s ease;
+  -webkit-transition: opacity 3s ease;
+  -ms-transition: opacity 3s ease;
+  transition: opacity 3s ease;
+  -moz-transition-delay: 1.25s;
+  -webkit-transition-delay: 1.25s;
+  -ms-transition-delay: 1.25s;
+  transition-delay: 1.25s;
+  content: '';
+  display: block;
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  opacity: 0.65;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 #banner h1 {
   font-size: 4em;
@@ -19,4 +74,38 @@
 #banner p {
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.75em;
+  padding: .5em;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar li{
+  float: left;
+  overflow: hidden;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+#navbar li a{
+  display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #111;
+}
+#navbar {
+  font-family:"Tahoma", Geneva, sans-serif;
+  position: relative;
 }
