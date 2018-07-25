@@ -1,4 +1,4 @@
-#banner {
+ #banner {
   display: -ms-flexbox;
   -ms-flex-pack: center;
   -ms-flex-align: center;
@@ -28,12 +28,10 @@
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: white;
   font-family: 'Tahoma', Geneva, sans-serif;
+  z-index: 0;
+
 }
 
-#banner .new {
-  position: relative;
-  bottom: 0;
-}
 
 #banner .inner {
   -moz-transform: scale(1.0);
@@ -45,8 +43,11 @@
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
   transition: opacity 1s ease, transform 1s ease;
   opacity: 1;
-  position: relative;
+  position: fixed;
   z-index: 2;
+  left: 0;
+  right: 0;
+
 }
 
 #banner:before {
@@ -70,15 +71,34 @@
   z-index: 1;
 }
 #banner h1 {
+  position: fixed;
+  text-align: center;
+  top:10px;
   font-size: 4em;
   margin-bottom: .25em;
   color: #FFF;
+  left: 0;
+  right: 0;
+  padding-top: 60px;
 }
 #banner p {
+  position: fixed;
+  text-align: center;
+  left: 0;
+  right: 0;
+  /* center: 150px; */
+  top: 200px;
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.75em;
+  margin-left: 20px;
+  margin-right:20px;
   padding: .5em;
 }
+
+
+
+
+
 
 #navbar ul {
   list-style-type: none;
@@ -111,5 +131,11 @@
 }
 #navbar {
   font-family:"Tahoma", Geneva, sans-serif;
-  position: relative;
+  position: fixed;
+   top:0;
+   width:100%;
+  z-index: 1;
+}
+#navbar .active{
+    background-color: #4CAF50;
 }
