@@ -30,7 +30,10 @@
   font-family: 'Tahoma', Geneva, sans-serif;
 }
 
-
+#banner .new {
+  position: relative;
+  bottom: 0;
+}
 
 #banner .inner {
   -moz-transform: scale(1.0);
@@ -104,6 +107,7 @@
 
 #navbar li a:hover {
     background-color: #111;
+    cursor: pointer;
 }
 #navbar {
   font-family:"Tahoma", Geneva, sans-serif;
