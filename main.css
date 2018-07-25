@@ -93,7 +93,7 @@
   margin-bottom: 20px;
 }
 #banner button {
-  background-color: #111;
+    background-color: #111;
     border: none;
     color: white;
     padding: 15px ;
@@ -138,10 +138,13 @@
   font-family:"Tahoma", Geneva, sans-serif;
   position: fixed;
    top:0;
-   left:0;
-   width:100%;
+   width:98.82%;
   z-index: 1;
 }
 #navbar .active{
     background-color: #4CAF50;
+}
+#majors h1{
+  padding-top: 70px;
+  z-index: 3
 }
