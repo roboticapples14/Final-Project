@@ -9,55 +9,33 @@
   <body>
 
     <a href="index.html"><button>Back</button></a>
-<div id="quiz">
     <!--Question 1: Working under stress -->
     <question>
     <h3>Are you able to work clearly and effectively during high stress situations?</h3>
-    <p>
-      <label>
-        <input id='sM20' type='radio' name="stressManagement" value="20" />
-        <span class="checkable">I work best under stress</span>
-      </label>
-    </p>
-    <p>
-      <input id="sM10" checked type='radio' name="stressManagement" value="10" />
-      <label for="radiodemo2" class="checkable">I can manage but I don't work well</span>
-    </p>
-    <p>
-      <input id="sM0" checked type='radio' name="stressManagement" value="0" />
-      <label for="radiodemo2" class="checkable">I don't work well under pressure</span>
-    </p>
+    <div id="sM">
+      <input type="radio" id="sM20" name="sM" value="20"> I work best under stress
+      <input type="radio" id="sM10" name="sM" value="10"> I can manage but I don't work well
+      <input type="radio" id="sM0" name="sM" value="0" checked="checked"> I don't work well under pressure
+    </div>
   </question>
 
   <!-- Question 2: Delayed satisfaction quotient -->
   <question>
   <h3>When you are working on a project, do you find more satisfaction when there are immediate results,
     or projects which yield longer lasting, and sometimes delayed results?</h3>
-  <p>
-    <label>
-      <input type='radio' name="delayedSatisfaction" value="0" />
-      <span class="checkable">I prefer work with immediate results</span>
-    </label>
-  </p>
-  <p>
-    <input id="radiodemo2" checked type='radio' name="delayedSatisfaction" value="20" />
-    <label for="radiodemo2" class="checkable">I prefer working on long term projects</span>
-  </p>
+  <div id="dS">
+    <input type="radio" id="dS0" name="dS" value="0"> I prefer work with immediate results
+    <input type="radio" id="dS20" name="dS" value="20"> I prefer working on long term projects
+  </div>
 </question>
 
 <!-- Question 3: problem solving -->
 <question>
 <h3>Do you enjoy solving problems and fixing things?</h3>
-<p>
-  <label>
-    <input type='radio' name="solvingProblems" value="20" />
-    <span class="checkable">Yes, I enjoy solving difficult problems</span>
-  </label>
-</p>
-<p>
-  <input id="radiodemo2" checked type='radio' name="solvingProblems" value="0" />
-  <label for="radiodemo2" class="checkable">I don't find satisfaction from working with difficult problems or fixing things</span>
-</p>
+<div id="pS">
+  <input type="radio" id="pS20" name="pS" value="20"> Yes, I enjoy solving difficult problems
+  <input type="radio" id="pS0" name="pS" value="0"> I don't find satisfaction from working with difficult problems or fixing things
+</div>
 </question>
 
 <!-- Question 4: Screen time -->
@@ -132,7 +110,13 @@
 
 
 <button onclick="submit()">Submit</button>
-</div>
+
+<script type="text/javascript">
+    document.write("<p>" + submit() + "</p>");
+</script>
+
+
+
 
   </body>
 </html>
