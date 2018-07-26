@@ -5,6 +5,11 @@
     <link rel="stylesheet" type="text/css" href="../main.css">
     <meta charset="utf-8">
     <title>Nursing</title>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
   </head>
   <body>
 
@@ -87,11 +92,86 @@
         <li>Empathy</li>
         <li>Emotional Stability</li>
         <li>High tolerance</li>
-
       </ul>
     </div>
 
+  <div>
+    <h2>Opportunity</h2>
+    <div class="row">
+  <div class="column">
+    <img src="../images/images.jpg" alt="nurse" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/diabetes-test.jpg" alt="diabetes" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/school.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
 
+  </div>
+
+
+
+<!-- CHART -->
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <script>
+  Highcharts.setOptions({
+  colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+    return {
+      radialGradient: {
+        cx: 0.5,
+        cy: 0.3,
+        r: 0.7
+      },
+      stops: [
+        [0, color],
+        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+      ]
+    };
+  })
+  });
+
+  Highcharts.chart('container', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: 'What do Nursing Majors Become after Graduating?'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+        },
+        connectorColor: 'silver'
+      }
+    }
+  },
+  series: [{
+    name: 'Percent of Graduates',
+    data: [
+      { name: 'Health professionals', y: 97.2 },
+      { name: 'Childcare, Health and Education Works', y: 0.7 },
+      { name: 'Legal, Social and Welfare Workers', y: 0.5 },
+      { name: 'Education Professionals', y: 0.4 },
+      { name: 'Other', y: 1.2 }
+    ]
+  }]
+  });
+  </script>
 
   </body>
 </html>
