@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+
+    // Radialize the colors
+    Highcharts.setOptions({
+      colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+        return {
+          radialGradient: {
+            cx: 0.5,
+            cy: 0.3,
+            r: 0.7
+          },
+          stops: [
+            [0, color],
+            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+          ]
+        };
+      })
+    });
+
+    // Build the chart
+    Highcharts.chart('container', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'What do Psychology Majors do after Graduating?'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            },
+            connectorColor: 'silver'
+          }
+        }
+      },
+      series: [{
+        name: 'Percent of Graduates',
+        data: [
+          { name: 'Childcare, Health and Education Work', y: 19.4 },
+          { name: 'Further Study', y: 16.1 },
+          { name: 'Legal, social and welfare work', y: 14.1 },
+          { name: 'Secretarial and Numerical Clerks', y: 10.3 },
+          { name: 'Other', y: 43.2 }
+        ]
+      }]
+    });
+    </script>
+  </body>
+</html>
