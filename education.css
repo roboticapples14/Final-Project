@@ -26,10 +26,18 @@ h1 {
   font-size: 100px;
 }
 
-/* script{
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
-
-} */
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 p {
   font-size: 20px;
