@@ -19,6 +19,8 @@ body {
     padding: 20px; /* Some padding */
 }
 
+div { text-align: center; }
+ul { display: inline-block; text-align: left;}
 
 h1 {
   font-size: 100px;
