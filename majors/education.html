@@ -4,7 +4,19 @@
 <link rel="stylesheet" type="text/css" href="../education.css">
 <link rel="stylesheet" type="text/css" href="main.css">
     <title></title>
+
+    <script src="charts.js" type="application/javascript"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
   </head>
+
+
+
   <body>
     <nav id= "navbar">
       <ul>
@@ -94,7 +106,61 @@ and learning to help them grow and develop is crucial to<br>
 persuing a career in education.
 </p>
 
+<script>
 
+Highcharts.chart('container', {
+chart: {
+  type: 'column'
+},
+title: {
+  text: 'Education Jobs and Annual Salaries'
+},
+subtitle: {
+  text: 'Source: California Department of Education'
+},
+xAxis: {
+  categories: [
+    'Elementary School Teacher',
+    'High School Teacher',
+    'Education Administrator',
+    'Learning Mentor',
+    'Community Education Officer'
+
+  ],
+  crosshair: true
+},
+yAxis: {
+  min: 0,
+  title: {
+    text: 'Annual Salary ($)'
+  }
+},
+tooltip: {
+  headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+  pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+    '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+  footerFormat: '</table>',
+  shared: true,
+  useHTML: true
+},
+plotOptions: {
+  column: {
+    pointPadding: 0.2,
+    borderWidth: 0
+  }
+},
+series: [{
+  name: 'Beginning Salary',
+  data: [47034, 46060, 116119, 35000, 170379]
+
+}, {
+  name: 'Highest Salary',
+  data: [81838, 98039, 127576, 85000, 178388]
+
+}]
+
+});
+</script>
 
 
   </body>
