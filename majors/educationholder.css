@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Tahoma', Geneva, sans-serif;
    background-color: darkgrey;
@@ -21,7 +22,7 @@ body {
 }
 
 div { text-align: center; }
-.trait { display: inline-block; text-align: left;}
+ul { display: inline-block; text-align: left;}
 
 h1 {
   font-size: 100px;
@@ -43,4 +44,4 @@ h1 {
 p {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.85);
-}
+} */

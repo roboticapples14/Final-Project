@@ -138,9 +138,9 @@
 }
 #navbar {
   font-family:"Tahoma", Geneva, sans-serif;
-  position: fixed;
+  position: static;
    top:0;
-   width:98.82%;
+   width: ;
   z-index: 1;
 }
 #navbar .active{

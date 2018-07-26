@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <head>
-<link rel="stylesheet" type="text/css" href="../education.css">
+ <link rel="stylesheet" type="text/css" href="../education.css">
 <link rel="stylesheet" type="text/css" href="../main.css">
     <title>Education</title>
 
@@ -10,14 +10,12 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-
-
   </head>
 
 
 
   <body>
-    <nav id= "navbar">
+    <nav id= "navbar" >
       <ul>
       <li><a href="../index.html">Home</a></li>
       <li> <div class="dropdown">
@@ -71,7 +69,7 @@
 
 
 <div class="container">
-  <img src="../teacher.jpg" alt="Teaching" style="width:100%;">
+  <img src="../teacher.jpg" alt="Teaching" style="width:100%; height:100%;">
   <div class="content">
     <h1>Education</h1>
     <p> If you are well organized, patient, and love to be around people,
@@ -85,7 +83,7 @@
 <div>
   <h2> Important Traits of a Good Educator</h2>
 
-  <ul>
+  <ul class= trait>
     <li>Passion for learning</li>
     <li>Good public speaking skills</li>
     <li>Patience</li>
@@ -125,57 +123,57 @@ persuing a career in education.
 <script>
 
 Highcharts.chart('container', {
-chart: {
-  type: 'column'
-},
-title: {
-  text: 'Education Jobs and Annual Salaries'
-},
-subtitle: {
-  text: 'Source: California Department of Education'
-},
-xAxis: {
-  categories: [
-    'Elementary School Teacher',
-    'High School Teacher',
-    'Education Administrator',
-    'Learning Mentor',
-    'Community Education Officer'
-
-  ],
-  crosshair: true
-},
-yAxis: {
-  min: 0,
+  chart: {
+    type: 'column'
+  },
   title: {
-    text: 'Annual Salary ($)'
-  }
-},
-tooltip: {
-  headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-  pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-    '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
-  footerFormat: '</table>',
-  shared: true,
-  useHTML: true
-},
-plotOptions: {
-  column: {
-    pointPadding: 0.2,
-    borderWidth: 0
-  }
-},
-series: [{
-  name: 'Beginning Salary',
-  data: [47034, 46060, 116119, 35000, 170379]
+    text: 'Education Jobs and Annual Salaries'
+  },
+  subtitle: {
+    text: 'Source: California Department of Education'
+  },
+  xAxis: {
+    categories: [
+      'Elementary School Teacher',
+      'High School Teacher',
+      'Education Administrator',
+      'Learning Mentor',
+      'Community Education Officer'
 
-}, {
-  name: 'Highest Salary',
-  data: [81838, 98039, 127576, 85000, 178388]
+    ],
+    crosshair: true
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Annual Salary ($)'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [{
+    name: 'Beginning Salary',
+    data: [47034, 46060, 116119, 35000, 170379]
 
-}]
+  }, {
+    name: 'Highest Salary',
+    data: [81838, 98039, 127576, 85000, 178388]
 
-});
+  }]
+
+  });
 </script>
 
 
