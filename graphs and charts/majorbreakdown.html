@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+Highcharts.chart('container', {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: 'Average Salary per Major'
+  },
+  subtitle: {
+    text: 'Source: PayScale.com'
+  },
+  xAxis: {
+    min: 0,
+    title: {
+      text: 'Majors'
+    },
+    categories: [
+      'Business/Managment',
+      'Nursing',
+      'Psychology',
+      'Medical Assistant/Technician',
+      'Criminal Justice',
+      'Education',
+      'Engineering',
+      'Finance/Accounting',
+      'Communications/Journalism',
+      'Visual Arts',
+      'Mechanics and Repair',
+      'English',
+      'Mathematics',
+      'Film and Photography',
+      'Biology',
+      'International Relations',
+      'Computer Science',
+      ],
+    crosshair: true
+
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Salary ($)'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [{
+    name: 'Average Starting Salary',
+    data: [52236, 68450, 53610, 32981, 59605, 34891, 64891, 53300, 47047, 48714, 38100, 50125, 55087, 54870, 67360, 53744, 61321]
+
+  }]
+});
+
+</script>
+
+
+
+  </body>
+</html>
