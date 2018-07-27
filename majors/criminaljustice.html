@@ -2,6 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../majors.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
     <title>Criminal Justice</title>
   </head>
   <body>
@@ -56,7 +63,112 @@
       <li style="float:right"><a  href="../about.html">About</a></li>
     </ul>
     </nav>
+    <div class="container">
+      <img src="../images/nursing.jpg" alt="nurse" style="width:100%;">
+      <div class="content">
+        <h1>Nursing</h1>
+        <p> Nursing is a popular major that is gaurenteed to touch the lives of both
+        the student, and the people they will go on to work with. Nursing requires
+        a person who is physically, mentally, and emotionally strong. A career in
+        nursing is demanding, but if you love people, are easily adaptable, are interested
+        in helping and caring for others, and want to have an impact on the lives of
+        others, nursing could be the right major for you.</p>
+      </div>
+    </div>
 
+    <div class="boxed">
+      <h2> Traits all Nurses Should Have:</h2>
+
+      <ul class="trait">
+        <li>Compassion</li>
+        <li>Care</li>
+        <li>Patience</li>
+        <li>Flexibility</li>
+        <li>Pays attention to detail</li>
+        <li>Physical endurace</li>
+        <li>Good problem solving skills</li>
+        <li>Empathy</li>
+        <li>Emotional Stability</li>
+        <li>High tolerance</li>
+      </ul>
+    </div>
+
+  <div>
+    <h2>Opportunity</h2>
+    <div class="row">
+  <div class="column">
+    <img src="../images/images.jpg" alt="nurse" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/diabetes-test.jpg" alt="diabetes" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/school.jpg" alt="Mountains" style="width:100%">
+  </div>
+  </div>
+
+  </div>
+
+  <div>
+  <p> Although the majority of nursing majors become nurses after graduating, there are plenty of other
+    jobs that a nursing major can pursue. One could become a diabetes management nurse, a school nurse, a
+    medical case manager, or even work in a psychiatric facility or physician's office. A graduate could even
+  go back to school to increase their skills, or become in legal work or education. </p>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<!-- GRAPH -->
+
+<script>
+
+Highcharts.chart('container', {
+chart: {
+type: 'column'
+},
+title: {
+text: 'Jobs in Criminal Justice and Salaries'
+},
+subtitle: {
+text: 'Source: criminaljusticedegreeschools.com'
+},
+xAxis: {
+categories: [
+  'Crime Lab Analyst',
+  'Crime Scene Investigator',
+  'DEA Agent',
+  'Police Officer',
+  'Homocide Detective',
+  'Forensic Nurse'
+
+],
+crosshair: true
+},
+yAxis: {
+min: 0,
+title: {
+  text: 'Salary ($)'
+}
+},
+tooltip: {
+headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+  '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+footerFormat: '</table>',
+shared: true,
+useHTML: true
+},
+plotOptions: {
+column: {
+  pointPadding: 0.2,
+  borderWidth: 0
+}
+},
+series: [{
+name: 'Annual Salary',
+data: [60090, 79620, 54460, 61270, 79620, 71000]
+
+}]
+});
+</script>
 
   </body>
 </html>
