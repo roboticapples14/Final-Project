@@ -2,6 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../majors.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
     <title>Criminal Justice</title>
   </head>
   <body>
@@ -57,6 +64,101 @@
     </ul>
     </nav>
 
+    <div class="container">
+      <img src="../images/lawer.jpg" alt="nurse" style="width:100%;">
+      <div class="content">
+        <h1>Criminal Justice</h1>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="boxed">
+      <h2> Possible Traits of a Criminal Justice Major:</h2>
+
+      <ul class="trait">
+        <li>Good problem solving skills</li>
+        <li>Ability to see things from new perspectives</li>
+        <li>Open mindedness</li>
+        <li>Moderate physical ability</li>
+        <li>Pays attention to detail</li>
+        <li>Physical endurace</li>
+        <li>Good temperment control</li>
+      </ul>
+    </div>
+
+  <div>
+    <h2>Opportunity</h2>
+    <div class="row">
+  <div class="column">
+    <img src="../images/police.jpg" alt="nurse" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/scene.jpg" alt="diabetes" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/fbi.jpg" alt="Mountains" style="width:100%">
+  </div>
+  </div>
+
+  </div>
+
+  <div>
+  <p></p>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<!-- GRAPH -->
+
+<script>
+
+Highcharts.chart('container', {
+chart: {
+type: 'column'
+},
+title: {
+text: 'Jobs in Criminal Justice and Salaries'
+},
+subtitle: {
+text: 'Source: criminaljusticedegreeschools.com'
+},
+xAxis: {
+categories: [
+  'Crime Lab Analyst',
+  'Crime Scene Investigator',
+  'DEA Agent',
+  'Police Officer',
+  'Homocide Detective',
+  'Forensic Nurse'
+
+],
+crosshair: true
+},
+yAxis: {
+min: 0,
+title: {
+  text: 'Salary ($)'
+}
+},
+tooltip: {
+headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+  '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+footerFormat: '</table>',
+shared: true,
+useHTML: true
+},
+plotOptions: {
+column: {
+  pointPadding: 0.2,
+  borderWidth: 0
+}
+},
+series: [{
+name: 'Annual Salary',
+data: [60090, 79620, 54460, 61270, 79620, 71000]
+
+}]
+});
+</script>
 
   </body>
 </html>
