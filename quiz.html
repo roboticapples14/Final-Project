@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<script src="quiz.js"></script>
+<!-- <script src="quiz.js"></script> -->
 
   <head>
     <meta charset="utf-8">
@@ -13,9 +13,9 @@
     <question>
     <h3>Are you able to work clearly and effectively during high stress situations?</h3>
     <div id="sM">
-      <input type="radio" id="sM20" name="sM" value="20"> I work best under stress
-      <input type="radio" id="sM10" name="sM" value="10"> I can manage but I don't work well
-      <input type="radio" id="sM0" name="sM" value="0" checked="checked"> I don't work well under pressure
+      <input type="radio" id="sM20" name="sM20" value="20"> I work best under stress
+      <input type="radio" id="sM10" name="sM10" value="10"> I can manage but I don't work well
+      <input type="radio" id="sM0" name="sM0" value="0" checked="checked"> I don't work well under pressure
     </div>
   </question>
 
@@ -111,11 +111,115 @@
 
 <button onclick="submit()">Submit</button>
 
+
 <script type="text/javascript">
-    document.write("<p>" + submit() + "</p>");
+//im very confused :)
+var Nursing = 1;
+var A = document.getElementById('sM20');
+var val = A.value;
+// function submit() {
+//   if A.checked  {
+//     Nursing_Total = Nursing + A.value;
+// document.write(Nursing);
+document.write(val);
+}
 </script>
 
 
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript">
+var Business_Management = 0;
+var Nursing = 0;
+var Psychology = 0;
+var MedicalAssistant = 0;
+var CriminalJustice = 0;
+var Education = 0;
+var Engineering = 0;
+var Finance_Accounting = 0;
+var Communications_Journalism = 0;
+var VisualArts = 0;
+var Mechanics_Repair = 0;
+var English = 0;
+var Mathematics = 0;
+var Film_Video_Photography = 0;
+var Biology = 0;
+var International_Relations = 0;
+var Computer_Science = 0;
+
+function Q1() {
+  var A = document.getElementsById('sM20');
+  var B = document.getElementsById('sM10');
+  var C = document.getElementsById('sM0');
+
+  Nursing_Total = Nursing + A.value;
+  if A.checked  {
+    Business_Management = Business_Management + A.value;
+    Nursing_Total = Nursing + A.value;
+    MedicalAssistant = MedicalAssistant + A.value;
+    CriminalJustice = CriminalJustice + A.value;
+    International_Relations = International_Relations + A.value;
+  } Else if B.checked {
+    Business_Management = Business_Management + B.value;
+    Nursing = Nursing + B.value;
+    MedicalAssistant = MedicalAssistant + B.value;
+    CriminalJustice = CriminalJustice + B.value;
+    International_Relations = International_Relations + B.value;
+  }
+return Nursing_Total;
+}
+
+function Q2() {
+  var dS = document.getElementsById('dS');
+  for(var i = 0; i < dS.length; i++){
+    if(dS[i].checked){
+      Business_Management += dS[i].value;
+      CriminalJustice += dS[i].value;
+      Engineering += dS[i].value;
+      Finance_Accounting += dS[i].value;
+      VisualArts += dS[i].value;
+      Biology += dS[i].value;
+      Computer_Science += dS[i].value;  }
+}
+}
+
+function Q3() {
+  var pS = document.getElementsById('pS');
+  for(var i = 0; i < pS.length; i++){
+    if(pS[i].checked){
+      Business_Management += pS[i].value;
+      CriminalJustice += pS[i].value;
+      Engineering += pS[i].value;
+      Finance_Accounting += pS[i].value;
+      Nursing += pS[i].value;
+      Psychology += pS[i].value;
+      Biology += pS[i].value;
+      Biology += pS[i].value;
+      Biology += pS[i].value;
+      Computer_Science += pS[i].value;  }
+}
+}
+
+
+//Makes it print value of Nursing (before updating/adding value)
+function produceMessage(){
+  document.write(Q1());
+}
+
+function tester(test) {
+  document.write(test);
+}
+
+// function submit(Nursing_Total,Q1()) {
+//   document.write(Q1());
+}
+</script> -->
 
 
   </body>
