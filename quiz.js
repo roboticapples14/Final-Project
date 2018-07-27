@@ -17,16 +17,25 @@ var International_Relations = 0;
 var Computer_Science = 0;
 
 function Q1() {
-  var sM = document.getElementsById('sM');
-  for(var i = 0; i < sM.length; i++){
-    if(sM[i].checked){
-      Business_Management += sM[i].value;
-      Nursing += sM[i].value;
-      MedicalAssistant += sM[i].value;
-      CriminalJustice += sM[i].value;
-      International_Relations += sM[i].value;  }
+  var A = document.getElementsById('sM20');
+  var B = document.getElementsById('sM10');
+  var C = document.getElementsById('sM0');
 
-}
+  Nursing_Total = Nursing + A.value;
+  if A.checked  {
+    Business_Management = Business_Management + A.value;
+    Nursing_Total = Nursing + A.value;
+    MedicalAssistant = MedicalAssistant + A.value;
+    CriminalJustice = CriminalJustice + A.value;
+    International_Relations = International_Relations + A.value;
+  } Else if B.checked {
+    Business_Management = Business_Management + B.value;
+    Nursing = Nursing + B.value;
+    MedicalAssistant = MedicalAssistant + B.value;
+    CriminalJustice = CriminalJustice + B.value;
+    International_Relations = International_Relations + B.value;
+  }
+return Nursing_Total;
 }
 
 function Q2() {
@@ -61,13 +70,15 @@ function Q3() {
 }
 
 
-function submit() {
-  Q1();
-  Q2();
-  return Nursing;
-}
-
 //Makes it print value of Nursing (before updating/adding value)
 function produceMessage(){
-    return Nursing;
+  document.write(Q1());
+}
+
+function tester(test) {
+  document.write(test);
+}
+
+// function submit(Nursing_Total,Q1()) {
+//   document.write(Q1());
 }
