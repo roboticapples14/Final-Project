@@ -2,6 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../majors.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <meta charset="utf-8">
     <title>Psychology</title>
   </head>
@@ -59,6 +65,102 @@
     </ul>
     </nav>
 
+    <div class="container">
+      <img src="../images/psycho.jpg" alt="therapy" style="width:100%;">
+      <div class="content">
+        <h1>Psychology</h1>
+        <p>Psychology is currently one of the most popular college majors. If you think
+          you might be intersted in persuing a psych degree, there are a lot of things to consider.
+          A few important things to think about are how well you work with others, if you are well
+          able to cope with stress, and whether or not you would be interested in furthering your education
+          and attending grad school. A career in psychology requires someone who is analyitical and
+          willing to commit lots of time to their job and studies. If you are interested in observing and
+          understanding people and the way they think and act, psychology may be the right major for you.
+        </p>
+      </div>
+    </div>
+
+    <div class="boxed">
+
+      <h2>Important Traits of a Good Pychologist:</h2>
+      <u1 class="trait">
+        <li>Strong communication skills</li>
+        <li>Patience</li>
+        <li>Good listening and people skills</li>
+        <li>Analyitical skills</li>
+        <li>Observational skills</li>
+        <li>Problem solving skills</li>
+        <li>Trustworthiness</li>
+      </u1>
+
+    </div>
+
+    <p>A psychology degree develops knowledge of human behavior as well as
+      research, statistics, and writing skills. It can provide a solid foundation
+      for many careers including psychotherapy or couseling, genetics counsiling,
+      human resources and life coaching. After receiving a degree one can also return
+      to school to get thier masters or pursue a doctrate degree.</p>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <script>
+    // Radialize the colors
+    Highcharts.setOptions({
+      colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+        return {
+          radialGradient: {
+            cx: 0.5,
+            cy: 0.3,
+            r: 0.7
+          },
+          stops: [
+            [0, color],
+            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+          ]
+        };
+      })
+    });
+
+    // Build the chart
+    Highcharts.chart('container', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'What do Psychology Majors do after Graduating?'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            },
+            connectorColor: 'silver'
+          }
+        }
+      },
+      series: [{
+        name: 'Percent of Graduates',
+        data: [
+          { name: 'Childcare, Health and Education Work', y: 19.4 },
+          { name: 'Further Study', y: 16.1 },
+          { name: 'Legal, social and welfare work', y: 14.1 },
+          { name: 'Secretarial and Numerical Clerks', y: 10.3 },
+          { name: 'Other', y: 43.2 }
+        ]
+      }]
+    });
+    </script>
 
   </body>
 </html>
