@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Tahoma', Geneva, sans-serif;
-  background-color: darkgrey;
+  background-color: darkgrey
 }
 
 .container {
@@ -9,6 +9,8 @@ body {
     max-width: 3000px; /* Maximum width */
     margin: 0 auto;; /* Center it */
 }
+
+
 
 .container .content {
     position: absolute; /* Position the background text */
