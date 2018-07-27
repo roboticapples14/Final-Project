@@ -17,24 +17,52 @@ h1{
 .column {
     float: left;
     width: 33.33%;
+      /* background: rgba(0, 0, 0, 0.5); */
+}
+.row {
+  padding-top: 3px;
+  background: rgba(0, 0, 0, 0.5);
+
+
 }
 .row:after {
     content: "";
     display: table;
     clear: both;
+
 }
 .column-content{
   text-align: center;
   display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 66%;
+    width: 75%;
+
   }
 .prof-pic{
   border: 1px solid black;
   }
 
 #meet{
-  padding-bottom: 30px;
+  /* padding-bottom: 10px; */
   text-align: center;
+    /* background: rgba(0, 0, 0, 0.5); */
   }
+#discription{
+    padding: 15px;
+    }
+}
+
+#container {
+
+    /* bottom: 0; /* At the bottom. Use top:0 to append it to the top */ */
+    /* background: rgba(255, 255, 255, 0.5); /* Black background with 0.5 opacity */ */
+    /* color: #f1f1f1; /* Grey text */ */
+    /* width: 97%; /* Full width */ */
+    /* padding: 20px; /* Some padding */ */
+}
+
+.words {
+   color: rgba(255, 255, 255, 0.85); 
+
+}
