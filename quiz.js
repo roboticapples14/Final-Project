@@ -16,12 +16,11 @@ var Biology = 0;
 var International_Relations = 0;
 var Computer_Science = 0;
 
-function Q1() {
+function Q1(sM20, sM10,sM0) {
   var A = document.getElementsById('sM20');
   var B = document.getElementsById('sM10');
   var C = document.getElementsById('sM0');
 
-  Nursing_Total = Nursing + A.value;
   if A.checked  {
     Business_Management = Business_Management + A.value;
     Nursing_Total = Nursing + A.value;
@@ -39,16 +38,20 @@ return Nursing_Total;
 }
 
 function Q2() {
-  var dS = document.getElementsById('dS');
-  for(var i = 0; i < dS.length; i++){
-    if(dS[i].checked){
-      Business_Management += dS[i].value;
-      CriminalJustice += dS[i].value;
-      Engineering += dS[i].value;
-      Finance_Accounting += dS[i].value;
-      VisualArts += dS[i].value;
-      Biology += dS[i].value;
-      Computer_Science += dS[i].value;  }
+  // var dS = document.getElementsById('dS');
+  // for(var i = 0; i < dS.length; i++){
+  //   if(dS[i].checked){
+  //     Business_Management += dS[i].value;
+  //     CriminalJustice += dS[i].value;
+  //     Engineering += dS[i].value;
+  //     Finance_Accounting += dS[i].value;
+  //     VisualArts += dS[i].value;
+  //     Biology += dS[i].value;
+  //     Computer_Science += dS[i].value;
+  //     document.write("yes")}
+  //   else {
+      document.write("No");
+    }
 }
 }
 
@@ -73,6 +76,10 @@ function Q3() {
 //Makes it print value of Nursing (before updating/adding value)
 function produceMessage(){
   document.write(Q1());
+}
+
+function submit(Q2()) {
+  Q2()
 }
 
 function tester(test) {

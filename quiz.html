@@ -10,14 +10,15 @@
 
     <a href="index.html"><button>Back</button></a>
     <!--Question 1: Working under stress -->
-    <question>
+  <form  name=form1  method="post">
     <h3>Are you able to work clearly and effectively during high stress situations?</h3>
     <div id="sM">
-      <input type="radio" id="sM20" name="sM20" value="20"> I work best under stress
-      <input type="radio" id="sM10" name="sM10" value="10"> I can manage but I don't work well
-      <input type="radio" id="sM0" name="sM0" value="0" checked="checked"> I don't work well under pressure
+      <input type="radio" id="sM20" name="myradio1" value="20"> I work best under stress
+      <input type="radio" id="sM10" name="myradio" value="10"> I can manage but I don't work well
+      <input type="radio" id="sM0" name="myradio" value="0" checked="checked"> I don't work well under pressure
     </div>
   </question>
+ </form>
 
   <!-- Question 2: Delayed satisfaction quotient -->
   <question>
@@ -114,15 +115,12 @@
 
 <script type="text/javascript">
 //im very confused :)
-var Nursing = 1;
-var A = document.getElementById('sM20');
-var val = A.value;
-// function submit() {
-//   if A.checked  {
-//     Nursing_Total = Nursing + A.value;
-// document.write(Nursing);
-document.write(val);
+
+function submit(sM20) {
+  var A = document.getElementsById('sM20');
+  document.write(A);
 }
+
 </script>
 
 
