@@ -30,10 +30,11 @@ h1 {
 
 
 .boxed {
-  border: 3px solid darkblue ;
   width: 500px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  background-color: Cornsilk;
 }
 
 .column {
