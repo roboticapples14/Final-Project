@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Tahoma', Geneva, sans-serif;
-  background-color: darkgrey
+  background-color: Snow;
 }
 
 .container {
@@ -10,13 +10,15 @@ body {
     margin: 0 auto;; /* Center it */
 }
 
-
+.content  {
+  color: Snow;
+}
 
 .container .content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
+    color: Snow; /* White text */
     width: 97%; /* Full width */
     padding: 20px; /* Some padding */
 }
@@ -30,13 +32,39 @@ h1 {
 
 
 .boxed {
-  width: 500px;
+  color: Snow;
+  height: 100%;
   margin-top: 50px;
+  width: 100%;
+  margin-top: -25px;
+  padding-top: 0px;
+  border: 1px solid Black;
   margin-left: auto;
   margin-right: auto;
-  background-color: Cornsilk;
+  background-color: #1E1B18;
 }
-
+.opportunities  {
+  color: Snow;
+  height: 100%;
+  width: 100%;
+  border: 1px solid Black;
+  margin-top: -15px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #403F4C;
+}
+.data_info{
+  color: White;
+  height: 100%;
+  width: 90%;
+  border: 1px solid Black;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1E1B18;
+}
 .column {
   float: left;
   width: 32.5%;
@@ -49,10 +77,12 @@ h1 {
   clear: both;
   display: table;
 }
-
+.data_info{
+  font-size: 25px;
+  color: Black;
+}
 p {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 25px;
 }
 
  img {
