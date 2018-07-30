@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+    color: Snow;
     position: relative;
     max-width: 3000px; /* Maximum width */
     margin: 0 auto;; /* Center it */
@@ -36,34 +37,36 @@ h1 {
   height: 100%;
   margin-top: 50px;
   width: 100%;
-  margin-top: -25px;
-  padding-top: 0px;
+  margin-top: -20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border: 1px solid Black;
   margin-left: auto;
   margin-right: auto;
-  background-color: #1E1B18;
+  background-color: #94AE89;
 }
 .opportunities  {
-  color: Snow;
+  color: Black;
   height: 100%;
   width: 100%;
-  border: 1px solid Black;
-  margin-top: -15px;
-  padding-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #403F4C;
-}
-.data_info{
-  color: White;
-  height: 100%;
-  width: 90%;
-  border: 1px solid Black;
+  /* border: 1px solid Black; */
   margin-top: 0px;
   padding-top: 0px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #1E1B18;
+  /* background-color: #59594A; */
+}
+.data_info{
+  color: White;
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: Snow;
+  font-size: 20px;
+  color: Black;
 }
 .column {
   float: left;
@@ -77,14 +80,16 @@ h1 {
   clear: both;
   display: table;
 }
-.data_info{
-  font-size: 25px;
-  color: Black;
-}
 p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
  img {
 border: 1px solid black;
+}
+.green  {
+  color: #879F7D;
+}
+.diff_color {
+  color: #272838
 }
