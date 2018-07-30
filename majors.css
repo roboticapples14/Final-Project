@@ -36,11 +36,11 @@ h1 {
   color: Snow;
   height: 100%;
   margin-top: 50px;
-  width: 40%;
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: 1px solid Black;
   margin-left: auto;
   margin-right: auto;
@@ -60,7 +60,7 @@ h1 {
 .data_info{
   color: White;
   height: 100%;
-  width: 100%;
+  width: 65%;
   margin-top: 0px;
   padding-top: 0px;
   margin-left: auto;
@@ -89,7 +89,7 @@ p {
 border: 1px solid black;
 }
 .green  {
-  color: #879F7D;
+  color: #6C7F64;
   text-align: center;
 }
 .diff_color {
