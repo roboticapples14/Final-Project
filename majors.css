@@ -1,22 +1,25 @@
 
 body {
   font-family: 'Tahoma', Geneva, sans-serif;
-  background-color: darkgrey
+  background-color: Snow;
 }
 
 .container {
+    color: Snow;
     position: relative;
     max-width: 3000px; /* Maximum width */
     margin: 0 auto;; /* Center it */
 }
 
-
+.content  {
+  color: Snow;
+}
 
 .container .content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
+    color: Snow; /* White text */
     width: 97%; /* Full width */
     padding: 20px; /* Some padding */
 }
@@ -30,12 +33,42 @@ h1 {
 
 
 .boxed {
-  border: 3px solid darkblue ;
-  width: 500px;
+  color: Snow;
+  height: 100%;
+  margin-top: 50px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid Black;
   margin-left: auto;
   margin-right: auto;
+  background-color: #333;
 }
-
+.opportunities  {
+  color: Black;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid Black; */
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #59594A; */
+}
+.data_info{
+  color: White;
+  height: 100%;
+  width: 65%;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: Snow;
+  font-size: 20px;
+  color: Black;
+}
 .column {
   float: left;
   width: 32.5%;
@@ -48,12 +81,21 @@ h1 {
   clear: both;
   display: table;
 }
-
 p {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.85);
 }
 
  img {
 border: 1px solid black;
+}
+.green  {
+  color: #6C7F64;
+  text-align: center;
+}
+.diff_color {
+  color: #272838
+}
+
+h2{
+  text-align: center
 }

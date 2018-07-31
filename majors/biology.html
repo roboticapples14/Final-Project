@@ -2,11 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../majors.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <meta charset="utf-8">
+
     <title>Biology</title>
   </head>
   <body>
-    
+
     <nav id= "navbar">
       <ul>
       <li><a href="../index.html">Home</a></li>
@@ -28,7 +34,6 @@
 
         <div class="subdropdown"><button class="subdropbtn">Health/Medicine</button>
           <div class="subdropdown-content">
-          <a href="medicalassit.html">Medical Assistance</a>
           <a href="nursing.html">Nursing</a>
         </div></div>
 
@@ -45,7 +50,7 @@
           <a href="communications.html">Communications</a>
           <a href="education.html">Education</a>
           <a href="internationalrelations.html">International Relations</a>
-          <a href="psychcology.html">Psychology</a>
+          <a href="psychology.html">Psychology</a>
           <a href="criminaljustice.html">Criminal Justice</a>
         </div></div>
 
@@ -60,5 +65,129 @@
     </nav>
 
 
-  </body>
-</html>
+    <div class="container">
+      <img src="../images/biologist-1.png" alt="business" style="width:100%; height:100%;">
+      <div class="content">
+        <h1>Biology</h1>
+        <p>The Biology major helps students to understand the
+          principles governing life processes at all levels–molecular, cellular,
+          organismal, and ecological. students look at development, behavior,
+          physiology, genetics, and more with an evolutionary perspective in order
+          to develop a deeper understanding of life and development throughtout
+          time.</p>
+      </div>
+    </div>
+
+    <div class="boxed">
+      <h2> Important Traits of a Business Major</h2>
+
+      <ul class="trait">
+        <li>Leadership skills</li>
+        <li>Competitive</li>
+        <li>Communication skills</li>
+        <li>Ambition</li>
+        <li>Reliability</li>
+        <li>Likable</li>
+        <li>Willingness to take risks</li>
+        <li>Takes initiative</li>
+      </ul>
+    </div>
+<div class="opportunities">
+<h2>
+  <center>Opportunities</center>
+</h2>
+
+    <div class="row">
+      <div class="column">
+        <img src="../images/bio.jpg" alt="Smiley face" style="width:370px;height:320px;">
+      </div>
+      <div class="column">
+        <img src="../images/bio 2.jpg" alt="Smiley face" style="width:370px;height:320px;">
+      </div>
+      <div class="column">
+        <img src="../images/bio 3.jpg" alt="Smiley face" style="width:370px;height:320px;">
+      </div>
+    </div>
+</div>
+    <div class="data_info">
+      <p> Majoring in business opens a door to many fields and career options. One could become project
+        manager, business advisor,investment banker, risk manager, stockbroker,supply chain manager or business
+        analyst. A business major could even go into advertising or public relations. There are so many options
+        and opportunities. Many graduates go into marketing or finance.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!--Graph  -->
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+Highcharts.chart('container', {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: 'Jobs in Biology and Salary'
+  },
+  subtitle: {
+    text: 'Source: Payscale.com'
+  },
+  xAxis: {
+    categories: [
+      "Clinical Trial Manager",
+      "Labratory Director",
+      "Staff Scientist",
+      "Biotechnology Research Scientist",
+      "Labratory Manager",
+      "Biologist",
+      "Microbiologist",
+      "Histotechnologist",
+      "Biotechnology Research Associate",
+      "Wildlife Biologist"
+    ],
+    crosshair: true
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Salary($)'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [{
+    name: 'Mid-Career Pay',
+    data: [117000, 100000, 96400, 92600, 72500, 67900, 66400, 59700, 66800, 61600]
+
+  }, {
+    name: '% of Workers with a Biology Major',
+    data: [25,22,18,24,23,54,40,58,24,32]
+  }]
+});
+
+</script>
+
+
+
+
+
+
+</body>

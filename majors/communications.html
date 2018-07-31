@@ -2,11 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../majors.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <meta charset="utf-8">
     <title>Communications</title>
   </head>
   <body>
-    
+
     <nav id= "navbar">
       <ul>
       <li><a href="../index.html">Home</a></li>
@@ -28,7 +34,6 @@
 
         <div class="subdropdown"><button class="subdropbtn">Health/Medicine</button>
           <div class="subdropdown-content">
-          <a href="medicalassit.html">Medical Assistance</a>
           <a href="nursing.html">Nursing</a>
         </div></div>
 
@@ -45,7 +50,7 @@
           <a href="communications.html">Communications</a>
           <a href="education.html">Education</a>
           <a href="internationalrelations.html">International Relations</a>
-          <a href="psychcology.html">Psychology</a>
+          <a href="psychology.html">Psychology</a>
           <a href="criminaljustice.html">Criminal Justice</a>
         </div></div>
 
@@ -59,6 +64,125 @@
     </ul>
     </nav>
 
+    <div class="container">
+      <img src="../images/commain.png" alt="law" style="width:100%;">
+      <div class="content">
+        <h1>Communications</h1>
+        <p>Communications is a very broad major and can be anything from
+           public relations to journalism. Put simply, communications is
+           the study of human communication, weather that be through
+            politics, entertainment, news or more. </p>
+      </div>
+    </div>
 
+    <div class="boxed">
+      <h2> Good Traits of a communications major:</h2>
+
+      <ul class="trait">
+
+        <li>Good writing skills</li>
+        <li>organization</li>
+        <li>Critical thinking</li>
+        <li>Passoinate</li>
+      </ul>
+    </div>
+
+  <div>
+
+    <div class="row">
+  <div class="column">
+    <img src="../images/comm1.jpg" alt="nurse" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/comm2.jpg" alt="diabetes" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/comm3.jpg" alt="Mountains" style="width:100%">
+  </div>
+  </div>
+
+  </div>
+  <h2 class= "green">Opportunities</h2>
+  <div>
+  <p>A communications may be useful because it can be applied to many
+     different carreers such as a journalism, business, politics,
+      entertainment and more! One of the most important take aways from a communications
+      degree is the ability to effectivley communicate your ideas with others, which
+      can prove useful in many different ways.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- GRAPH -->
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+<script>
+
+    Highcharts.chart('container', {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Jobs in Communication and Salary'
+      },
+      subtitle: {
+        text: 'Source: Payscale.com'
+      },
+      xAxis: {
+        categories: [
+          'News Anchor',
+          'Executive Producer',
+          'Social Media Director',
+          'Senior Copywriter',
+          'Television Promotions Producer',
+          'Radio Producer',
+          'Social Media Strategist',
+          'Advertising Broadcast Manager',
+        ],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Salary ($)'
+        }
+      },
+      tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Mid-Career Salary',
+        data: [69800, 107000, 104000, 79000, 60300, 46000, 76200, 83300]
+
+      }, {
+        name: '% of Workers with Communication Majors',
+        data: [37, 16, 23, 16, 21, 24, 16, 23]
+
+      }]
+    });
+
+  </script>
   </body>
 </html>
