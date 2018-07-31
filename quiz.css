@@ -5,7 +5,7 @@ body {
 }
 h2 {
 	  text-align: center;
-    color: Black;
+    /* color: Black; */
     font-size: 45px;
     letter-spacing: 2px;
     font-style: Helvetica;
@@ -262,7 +262,20 @@ ul{
 
 }
 .subdropdown-content a:hover {
-    background-color: #111;}
+    background-color: #111;
+}
 .subdropdown:hover .subdropdown-content {
     display: block;
+}
+.banner  {
+  color: white;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid Black; */
+  margin-top: 0px;
+  padding-top: 1px;
+	padding-bottom: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333;
 }
