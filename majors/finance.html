@@ -4,6 +4,11 @@
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" type="text/css" href="../majors.css">
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
     <meta charset="utf-8">
 
     <title>Finance</title>
@@ -118,6 +123,64 @@
       <div id="salary"><b>$61,000</b></div>
       </div>
 
+<!-- Graph -->
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+  Highcharts.chart('container', {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Jobs for Film Majors and Salary'
+    },
+    subtitle: {
+      text: 'Source: prospects.com'
+    },
+    xAxis: {
+      categories: [
+        'Financial Planner',
+        'Financial Analyst',
+        'Investor Relations Associate',
+        'Budget Analyst',
+        'Actuary',
+        'Accountant',
+        'Credit Analyst',
+        'Commercial Real Estate Agent'
+      ],
+      crosshair: true,
+      title:{
+        text:'Jobs'
+      }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Salary($)'
+      }
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
+      }
+    },
+    series: [{
+      name: 'Mid-Career Salary',
+      data: [89160, 67000, 71590, 97070, 67190, 48560, 85000]
+
+    }]
+  });
+</script>
 
 
 </body>
