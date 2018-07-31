@@ -117,12 +117,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
 <!--Graph  -->
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
@@ -162,7 +156,7 @@ Highcharts.chart('container', {
   tooltip: {
     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+      '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
     footerFormat: '</table>',
     shared: true,
     useHTML: true
@@ -174,7 +168,7 @@ Highcharts.chart('container', {
     }
   },
   series: [{
-    name: 'Mid-Career Pay',
+    name: 'Mid-Career Pay($)',
     data: [117000, 100000, 96400, 92600, 72500, 67900, 66400, 59700, 66800, 61600]
 
   }, {

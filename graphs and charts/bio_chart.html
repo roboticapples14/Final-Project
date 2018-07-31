@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="charts.js" type="application/javascript"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+    <script>
+
+    Highcharts.chart('container', {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Jobs in Biology and Salary'
+      },
+      subtitle: {
+        text: 'Source: Payscale.com'
+      },
+      xAxis: {
+        categories: [
+          "Clinical Trial Manager",
+          "Labratory Director",
+          "Staff Scientist",
+          "Biotechnology Research Scientist",
+          "Labratory Manager",
+          "Biologist",
+          "Microbiologist",
+          "Histotechnologist",
+          "Biotechnology Research Associate",
+          "Wildlife Biologist"
+        ],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Salary($)'
+        }
+      },
+      tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Mid-Career Pay',
+        data: [117000, 100000, 96400, 92600, 72500, 67900, 66400, 59700, 66800, 61600]
+
+      }, {
+        name: '% of Workers with a Biology Major',
+        data: [25,22,18,24,23,54,40,58,24,32]
+
+      }]
+    });
+
+</script>
+  </body>
+</html>

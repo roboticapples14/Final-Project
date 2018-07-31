@@ -114,16 +114,6 @@
   </p>
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- GRAPH -->
 
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -163,7 +153,7 @@
       tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-          '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+          '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -175,7 +165,7 @@
         }
       },
       series: [{
-        name: 'Mid-Career Salary',
+        name: 'Mid-Career Salary($)',
         data: [69800, 107000, 104000, 79000, 60300, 46000, 76200, 83300]
 
       }, {
