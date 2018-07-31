@@ -96,6 +96,27 @@ border: 1px solid black;
   color: #272838
 }
 
-h2{
+.green{
   text-align: center
+}
+
+.moneytime{
+
+}
+
+.columnj {
+    float: left;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.rowj:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#salary{
+  font-size: 45px;
+  padding-bottom: 20px;
 }
