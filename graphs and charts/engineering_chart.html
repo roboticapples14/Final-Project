@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
+
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <title></title>
+  </head>
+
+
+  <body>
+
+<script>
+  Highcharts.chart('container', {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Careers in Engineering and Salary'
+    },
+    subtitle: {
+      text: 'Source: Payscale.com'
+    },
+    xAxis: {
+      categories: [
+        'Aerospace Engineer',
+        'Agricultural Engineer',
+        'Automotive Engineer',
+        'Biomedical Engineer',
+        'Chemical Engineer',
+        'Civil Engineer',
+        
+      ],
+      crosshair: true,
+      title:{
+        text:'Jobs'
+      }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Salary($)'
+      }
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
+      }
+    },
+    series: [{
+      name: 'Mid-Career Salary',
+      data: [100690, 81710, 111730, 85800, 100240, 64970, 90120, 79530]
+
+    }]
+  });
+</script>
+  </body>
+</html>
