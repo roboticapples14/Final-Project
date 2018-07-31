@@ -6,31 +6,50 @@
 </head>
 <body>
   <nav id= "navbar">
-  <ul>
+    <ul>
     <li><a href="index.html">Home</a></li>
-     <li class="dropdown">  <button class="dropbtn"> Majors
+    <li> <div class="dropdown">
+    <button class="dropbtn">Major Information
+    </button>
+    <div class="dropdown-content">
+      <div class="subdropdown"><button class="subdropbtn">Art/Humanities</button>
+        <div class="subdropdown-content">
+        <a href="majors/english.html">English</a>
+        <a href="majors/film.html">Film</a>
+        <a href="majors/visualart.html">Visual Art</a>
+      </div></div>
+      <div class="subdropdown"><button class="subdropbtn">Business</button>
+        <div class="subdropdown-content">
+        <a href="majors/business.html">Business</a>
+        <a href="majors/finance.html">Finance</a>
+      </div></div>
 
-  </button>
-  <div class="dropdown-content">
-    <a href="majors/biology.html">Biology</a>
-    <a href="majors/business.html">Business</a>
-    <a href="majors/communications.html">Communications</a>
-    <a href="majors/criminaljustice.html">Criminal Justice</a>
-    <a href="majors/cs.html">Computer Science</a>
-    <a href="majors/education.html">Education</a>
-    <a href="majors/engineering.html">Engineering</a>
-    <a href="majors/english.html">English</a>
-    <a href="majors/film.html">Film</a>
-    <a href="majors/finance.html">Finance</a>
-    <a href="majors/internationalrelations.html">International Relations</a>
-    <a href="majors/math.html">Mathematics</a>
-    <a href="majors/mechanics.html">Mechanics/Auto Repair</a>
-    <a href="majors/medicalassit.html">Medical Assistance</a>
-    <a href="majors/nursing.html">Nursing</a>
-    <a href="majors/psychcology.html">Psychology</a>
-    <a href="majors/visualart.html">Visual Art</a>
-  </div>
-  </li>
+      <div class="subdropdown"><button class="subdropbtn">Health/Medicine</button>
+        <div class="subdropdown-content">
+        <a href="majors/nursing.html">Nursing</a>
+      </div></div>
+
+      <div class="subdropdown"><button class="subdropbtn">STEM</button>
+        <div class="subdropdown-content">
+        <a href="majors/biology.html">Biology</a>
+        <a href="majors/cs.html">Computer Science</a>
+        <a href="majors/engineering.html">Engineering</a>
+        <a href="majors/math.html">Mathematics</a>
+      </div></div>
+
+      <div class="subdropdown"><button class="subdropbtn">Social Science</button>
+        <div class="subdropdown-content">
+        <a href="majors/communications.html">Communications</a>
+        <a href="majors/education.html">Education</a>
+        <a href="majors/internationalrelations.html">International Relations</a>
+        <a href="majors/psychology.html">Psychology</a>
+      </div></div>
+
+      <div class="subdropdown"><button class="subdropbtn">Trades</button>
+        <div class="subdropdown-content">
+        <a href="majors/mechanics.html">Mechanics/Auto Repair</a>
+      </div></div>
+    </div></li>
     <li><a href="stats.html">Stats</a></li>
     <li style="float:right"><a  href="about.html">About</a></li>
   </ul>
@@ -40,7 +59,7 @@
 <h4>When you are working on a project, do you find more satisfaction when there are immediate results,
   or projects which yield longer lasting, and sometimes delayed results?</h4>
 <ul>
-<li><label><input type="radio" name="q1" value = "Mechanics" value="Visual_Arts" value = "Mechanics" value="Nursing" > I prefer work with immediate results</label></li>
+<li><label><input type="radio" name="q1" value = "Mechanics" value="Visual_Arts" value="Nursing" > I prefer work with immediate results</label></li>
 <li><label><input type="radio" name="q1" value="Business" value="International_Relations" value="Education" value="Criminal_Justice" value ="Mathematics" value="Engineering" value="Computer_Science"> I prefer working on long term projects</label></li>
 </ul>
 
@@ -126,7 +145,7 @@
 
 <div id="result_div" style="display:none;">
 <img id="result_image" alt="">
-<p id="result_text"></p>
+<p id="result_text"><a href="#">Hello</a></p>
 
 </form>
 <script type="text/javascript">
@@ -203,85 +222,81 @@
     RESULTS["Business"] = {
         name: "Business",
         image: "result_1.jpg",
-        text: "Text for the first"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/business.html"
     };
 
     RESULTS["Nursing"] = {
         name: "Nursing",
         image: "result_2.jpg",
-        text: "Text for the second result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/nursing.html"
     };
-    RESULTS["Med_Assistant"] = {
-        name: "Medical assistant",
-        image: "result_4.jpg",
-        text: "Text for the second result"
-    };
-
     RESULTS["Criminal_Justice"] = {
         name: "Criminal Justice",
         image: "result_5.jpg",
-        text: "Text for the third result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/criminaljustice.html"
     };
 
     RESULTS["Education"] = {
         name: "Education",
         image: "result_6.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/education.html"
     };
     RESULTS["Engineering"] = {
         name: "Engineering",
         image: "result_7.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/engineering.html"
     };
     RESULTS["Finance"] = {
         name: "Finance/Accounting",
         image: "result_7.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/finance.html"
     };
     RESULTS["Communications"] = {
         name: "Communications/Journalism",
         image: "result_8.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/communications.html"
     };
     RESULTS["Visual_Arts"] = {
         name: "Visual Arts",
         image: "result_9.jpg",
-        text: "Hi!"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/visualart.html"
     };
     RESULTS["Mechanics"] = {
+      // var string = str.link("https://www.w3schools.com");
         name: "Mechanics",
         image: "result_10.jpg",
-        text: "Text for the fourth result"
+        text: "Click here to learn more about your major:",
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/mechanics.html"
     };
     RESULTS["English"] = {
         name: "English",
         image: "result_11.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/english.html"
     };
     RESULTS["Mathematics"] = {
         name: "Mathematics",
         image: "result_12.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/math.html"
     };
     RESULTS["Film"] = {
         name: "Film",
         image: "result_13.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/film.html"
     };
     RESULTS["Biology"] = {
         name: "Biology",
         image: "result_14.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/biology.html"
     };
     RESULTS["International_Relations"] = {
         name: "International Relations",
         image: "result_15.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/internationalrelations.html"
     };
     RESULTS["Computer_Science"] = {
         name: "Computer Science",
         image: "result_16.jpg",
-        text: "Text for the fourth result"
+        link: "C:/Users/lenovo/Documents/GitHub/Final-Project/majors/cs.html"
     };
     /*************************************************************************
     If for some reason you need to give your form a different name attribute
