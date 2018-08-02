@@ -41,10 +41,11 @@
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
   transition: opacity 1s ease, transform 1s ease;
   opacity: 1;
-  position: fixed;
+  position: static;
   z-index: 2;
   left: 0;
   right: 0;
+  padding-bottom: 300px;
 
 }
 #banner:before {
@@ -68,7 +69,7 @@
   z-index: 1;
 }
 #banner h1 {
-  position: fixed;
+  position: static;
   text-align: center;
   top:10px;
   font-size: 5em;
@@ -79,7 +80,7 @@
   padding-top: 60px;
 }
 #banner p {
-  position: fixed;
+  position: static;
   text-align: center;
   left: 0;
   right: 0;
@@ -142,6 +143,7 @@
    top:0;
    width: ;
   z-index: 1;
+
 }
 #navbar .active{
     background-color: #4CAF50;
